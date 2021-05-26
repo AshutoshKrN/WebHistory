@@ -10,12 +10,25 @@ int addSiteToHistory(string url){
 }
 
 bool isBrowsingHistoryEmpty(){
+		if(s1.empty() )
+	{
+		return true;
+	}
+	else{
+		return false;
+	}
 
 }
 string mostRecentlyVisitedSite(){
 	return s1.top();
 }
 void goBackInTime(int n){
+	if(!isBrowsingHistoryEmpty()){
+		while(n--){
+			s1.pop();
+		}
+	}
+	
 
 }
 string printBrowsingHistory(){
